@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Krstoo/AndroidStudioProjects/APNarackiRestoran/app/src/main/res/drawable/roundcorner.xml" value="0.3828125" />
+        <entry key="..\:/Users/Krstoo/AndroidStudioProjects/APNarackiRestoran/app/src/main/res/drawable/spinneritem.xml" value="0.30885416666666665" />
+        <entry key="..\:/Users/Krstoo/AndroidStudioProjects/APNarackiRestoran/app/src/main/res/layout/activity_acc_info.xml" value="0.33" />
+        <entry key="..\:/Users/Krstoo/AndroidStudioProjects/APNarackiRestoran/app/src/main/res/layout/activity_kelner_bez_firma.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Krstoo/AndroidStudioProjects/APNarackiRestoran/app/src/main/res/layout/activity_kelner_pocetna.xml" value="0.20520833333333333" />
+        <entry key="..\:/Users/Krstoo/AndroidStudioProjects/APNarackiRestoran/app/src/main/res/layout/activity_main.xml" value="0.35260416666666666" />
+        <entry key="..\:/Users/Krstoo/AndroidStudioProjects/APNarackiRestoran/app/src/main/res/layout/activity_podesuvanja.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Krstoo/AndroidStudioProjects/APNarackiRestoran/app/src/main/res/layout/activity_promeni_lozinka.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Krstoo/AndroidStudioProjects/APNarackiRestoran/app/src/main/res/layout/activity_register.xml" value="0.35104166666666664" />
+        <entry key="..\:/Users/Krstoo/AndroidStudioProjects/APNarackiRestoran/app/src/main/res/layout/activity_smetka.xml" value="0.33" />
+        <entry key="..\:/Users/Krstoo/AndroidStudioProjects/APNarackiRestoran/app/src/main/res/layout/login_main.xml" value="0.35104166666666664" />
+        <entry key="..\:/Users/Krstoo/AndroidStudioProjects/APNarackiRestoran/app/src/main/res/layout/prebaruvac.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Krstoo/AndroidStudioProjects/APNarackiRestoran/app/src/main/res/layout/red_vo_tabela.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Krstoo/AndroidStudioProjects/APNarackiRestoran/app/src/main/res/layout/spinner_item.xml" value="0.29270833333333335" />
+        <entry key="..\:/Users/Krstoo/AndroidStudioProjects/APNarackiRestoran/app/src/main/res/menu/toolbar.xml" value="0.26458333333333334" />
+        <entry key="..\:/Users/Krstoo/AndroidStudioProjects/APNarackiRestoran/app/src/main/res/menu/toolbar_accinfo.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Krstoo/AndroidStudioProjects/APNarackiRestoran/app/src/main/res/menu/toolbar_masi.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Krstoo/AndroidStudioProjects/APNarackiRestoran/app/src/main/res/menu/toolbar_povrzi.xml" value="0.5" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

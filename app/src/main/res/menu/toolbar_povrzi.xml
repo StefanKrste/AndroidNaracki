@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/action_masi"
+        android:title="Маси"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/ic_table">
+    </item>
+
+    <item android:id="@+id/action_accinfo"
+        android:title="Информации за корисникот"
+        app:showAsAction="never">
+    </item>
+
+    <item android:id="@+id/action_signout"
+        android:title="Одјави се"
+        app:showAsAction="never">
+    </item>
+
+</menu>

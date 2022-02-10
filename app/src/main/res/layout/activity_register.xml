@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity"
+    android:background="@color/white"
+    android:scrollbars="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/Widget.MaterialComponents.Toolbar.Primary"
+        app:title="Регистрација"
+        app:titleTextColor="@color/black"
+        android:backgroundTint="#CF6161"/>
+
+    <EditText
+        android:id="@+id/RegisterName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint=" Име"
+        app:layout_constraintTop_toBottomOf="@+id/my_toolbar"
+        android:layout_marginTop="30dp"
+        android:drawableLeft="@drawable/ic_name"
+        android:textColor="@color/black"
+        android:textColorHint="#7E7C7C"
+        android:backgroundTint="@color/black"
+        android:singleLine="true"/>
+
+    <EditText
+        android:id="@+id/RegisterSurname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint=" Презиме"
+        app:layout_constraintTop_toBottomOf="@+id/RegisterName"
+        android:layout_marginTop="30dp"
+        android:drawableLeft="@drawable/ic_name"
+        android:textColor="@color/black"
+        android:textColorHint="#7E7C7C"
+        android:backgroundTint="@color/black"
+        android:singleLine="true"
+        />
+
+    <EditText
+        android:id="@+id/RegisterEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint=" Е-маил"
+        app:layout_constraintTop_toBottomOf="@+id/RegisterSurname"
+        android:layout_marginTop="30dp"
+        android:drawableLeft="@drawable/ic_email"
+        android:textColor="@color/black"
+        android:textColorHint="#7E7C7C"
+        android:backgroundTint="@color/black"
+        android:singleLine="true"/>
+
+    <EditText
+        android:id="@+id/RegisterUserName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint=" Корисничко име"
+        app:layout_constraintTop_toBottomOf="@+id/RegisterEmail"
+        android:layout_marginTop="30dp"
+        android:drawableLeft="@drawable/ic_username"
+        android:textColor="@color/black"
+        android:textColorHint="#7E7C7C"
+        android:backgroundTint="@color/black"
+        android:singleLine="true"/>
+
+    <EditText
+        android:id="@+id/RegisterPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint=" Лозинка"
+        android:inputType="textPassword"
+        app:layout_constraintTop_toBottomOf="@+id/RegisterUserName"
+        android:layout_marginTop="30dp"
+        android:drawableLeft="@drawable/ic_pass"
+        android:textColor="@color/black"
+        android:textColorHint="#7E7C7C"
+        android:backgroundTint="@color/black"
+        android:singleLine="true"/>
+
+    <EditText
+        android:id="@+id/RegisterPassword2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint=" Повторете ја лозинката"
+        android:inputType="textPassword"
+        app:layout_constraintTop_toBottomOf="@+id/RegisterPassword"
+        android:layout_marginTop="30dp"
+        android:drawableLeft="@drawable/ic_pass"
+        android:textColor="@color/black"
+        android:textColorHint="#7E7C7C"
+        android:backgroundTint="@color/black"
+        android:singleLine="true"/>
+
+    <EditText
+        android:id="@+id/RegisterPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint=" Телефонски број"
+        app:layout_constraintTop_toBottomOf="@+id/RegisterPassword2"
+        android:layout_marginTop="30dp"
+        android:drawableLeft="@drawable/ic_phone"
+        android:textColor="@color/black"
+        android:textColorHint="#7E7C7C"
+        android:backgroundTint="@color/black"
+        android:singleLine="true"
+        />
+
+    <Button
+        android:id="@+id/buttonRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/RegisterPhone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="20dp"
+        android:text="Регистрирај се"
+        android:textColor="@color/white"
+        android:layout_marginTop="17dp"
+        app:cornerRadius="20dp"
+        android:backgroundTint="#CF6161"
+        android:onClick="Register"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

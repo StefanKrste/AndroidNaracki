@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity"
+    android:background="@color/white"
+    android:scrollbars="vertical">
+
+    <TextView
+        android:id="@+id/txtGlavenNaslov"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="40dp"
+        android:text="Нарачки"
+        android:gravity="center"
+        android:textSize="35dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"/>
+
+    <ImageView
+        android:id="@+id/imgNaslovSlika"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtGlavenNaslov"
+        android:src="@drawable/note"/>
+
+
+    <EditText
+        android:id="@+id/LoginUsername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint=" Кориснички име"
+        app:layout_constraintTop_toBottomOf="@+id/imgNaslovSlika"
+        android:layout_marginTop="40dp"
+        android:drawableLeft="@drawable/ic_username"
+        android:textColor="@color/black"
+        android:textColorHint="#7E7C7C"
+        android:backgroundTint="@color/black"
+        android:singleLine="true"/>
+
+    <EditText
+        android:id="@+id/LoginPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint=" Лозинка"
+        android:inputType="textPassword"
+        app:layout_constraintTop_toBottomOf="@+id/LoginUsername"
+        android:layout_marginTop="70dp"
+        android:drawableLeft="@drawable/ic_pass"
+        android:textColor="@color/black"
+        android:textColorHint="#7E7C7C"
+        android:backgroundTint="@color/black"
+        android:singleLine="true"/>
+
+    <Button
+        android:id="@+id/buttonLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="#CF6161"
+        android:onClick="Login"
+        android:text="Најави се"
+        android:textColor="@color/black"
+        app:cornerRadius="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/LoginPassword" />
+
+    <TextView
+        android:id="@+id/txtRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonLogin"
+        android:text="Регистрирај се"
+        android:textSize="17dp"
+        android:textStyle="bold"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="60dp"
+        android:textColor="#003AE8"
+        android:clickable="true"
+        android:onClick="Register"/>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

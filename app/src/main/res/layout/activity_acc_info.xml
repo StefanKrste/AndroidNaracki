@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AccInfoActivity"
+    android:background="@color/white"
+    android:scrollbars="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/Widget.MaterialComponents.Toolbar.Primary"
+        app:title="Информации за корисникот"
+        app:titleTextColor="@color/black"
+        android:backgroundTint="#CF6161"/>
+
+    <TextView
+        android:id="@+id/InfoName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/my_toolbar"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:textSize="18sp"
+        android:drawableLeft="@drawable/ic_name"
+        android:textColor="@color/black"
+        android:textColorHint="#7E7C7C"
+        android:backgroundTint="@color/black"/>
+
+    <TextView
+        android:id="@+id/InfoSurname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/InfoName"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:textSize="18sp"
+        android:drawableLeft="@drawable/ic_name"
+        android:textColor="@color/black"
+        android:textColorHint="#7E7C7C"
+        android:backgroundTint="@color/black"/>
+
+    <TextView
+        android:id="@+id/InfoUserName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/InfoSurname"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:textSize="18sp"
+        android:drawableLeft="@drawable/ic_username"
+        android:textColor="@color/black"
+        android:textColorHint="#7E7C7C"
+        android:backgroundTint="@color/black"
+        android:singleLine="true"/>
+
+    <TextView
+        android:id="@+id/InfoEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/InfoUserName"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:textSize="18sp"
+        android:drawableLeft="@drawable/ic_email"
+        android:textColor="@color/black"
+        android:textColorHint="#7E7C7C"
+        android:backgroundTint="@color/black"/>
+
+    <EditText
+        android:id="@+id/InfoPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint=" Телефонски број"
+        app:layout_constraintTop_toBottomOf="@+id/InfoEmail"
+        android:layout_marginTop="30dp"
+        android:textSize="18sp"
+        android:drawableLeft="@drawable/ic_phone"
+        android:textColor="@color/black"
+        android:textColorHint="#7E7C7C"
+        android:backgroundTint="@color/black"/>
+
+    <Button
+        android:id="@+id/Zacuvaj"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/InfoPhone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_margin="30dp"
+        android:text="Зачувај"
+        android:textColor="@color/white"
+        app:cornerRadius="30dp"
+        android:backgroundTint="#CF6161"
+        android:onClick="Zacuvaj"/>
+
+    <Button
+        android:id="@+id/buttonPromeniLozinka"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/InfoPhone"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_margin="30dp"
+        android:text="Промени лозинка"
+        android:textColor="@color/white"
+        app:cornerRadius="30dp"
+        android:backgroundTint="#CF6161"
+        android:onClick="PromeniLozinka"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

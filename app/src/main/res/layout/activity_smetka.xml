@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SmetkaActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        style="@style/Widget.MaterialComponents.Toolbar.Primary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#CF6161"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="Сметка"
+        app:titleTextColor="@color/black" />
+
+    <TextView
+        android:id="@+id/txtMasi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/my_toolbar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="Број на маса:"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:layout_margin="20sp"/>
+
+    <TextView
+        android:id="@+id/brMasi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/my_toolbar"
+        app:layout_constraintLeft_toRightOf="@id/txtMasi"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:layout_margin="20sp"/>
+
+    <ScrollView
+        android:id="@+id/SmetkaScroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/txtMasi">
+        <TableLayout
+            android:id="@+id/table"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:stretchColumns="*">
+            <TableRow
+
+                android:id="@+id/firstRow"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/SifraArtikl"
+                    android:layout_width="65sp"
+                    android:layout_height="wrap_content"
+                    android:background="#B1B1B1"
+                    android:paddingTop="10dip"
+                    android:paddingBottom="10dip"
+                    android:text="Шифра"
+                    android:layout_weight="1"
+                    android:textColor="#000"
+                    android:textSize="14sp"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:id="@+id/NazivArtikl"
+                    android:layout_width="60sp"
+                    android:layout_height="wrap_content"
+                    android:background="#B1B1B1"
+                    android:paddingTop="10dip"
+                    android:paddingBottom="10dip"
+                    android:text="Назив"
+                    android:textColor="#000"
+                    android:textSize="14sp"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:id="@+id/KolArtikl"
+                    android:layout_width="45sp"
+                    android:layout_height="wrap_content"
+                    android:background="#B1B1B1"
+                    android:paddingTop="10dip"
+                    android:paddingBottom="10dip"
+                    android:text="Кол"
+                    android:textColor="#000"
+                    android:textSize="14sp"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:id="@+id/MaloprodaznaArtikl"
+                    android:layout_width="85sp"
+                    android:layout_height="wrap_content"
+                    android:background="#B1B1B1"
+                    android:paddingTop="10dip"
+                    android:paddingBottom="10dip"
+                    android:text="Единечна"
+                    android:textColor="#000"
+                    android:textSize="14sp"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:id="@+id/VkMaloprodaznaArtikl"
+                    android:layout_width="70sp"
+                    android:layout_height="wrap_content"
+                    android:background="#B1B1B1"
+                    android:paddingTop="10dip"
+                    android:paddingBottom="10dip"
+                    android:text="Вкупно"
+                    android:textColor="#000"
+                    android:textSize="14sp"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:id="@+id/Selektiraj"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#B1B1B1"
+                    android:padding="10dip"
+                    android:text="+"
+                    android:textColor="#000"
+                    android:textSize="14sp"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:id="@+id/Izbrisi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#B1B1B1"
+                    android:padding="10dip"
+                    android:text="X"
+                    android:textColor="#000"
+                    android:textSize="14sp"
+                    android:gravity="center"/>
+
+            </TableRow>
+        </TableLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/txtVkupno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/SmetkaScroll"
+        app:layout_constraintRight_toLeftOf="@+id/Vkupno"
+        android:text="Вкупно:"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:layout_margin="20sp"/>
+
+    <TextView
+        android:id="@+id/Vkupno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/SmetkaScroll"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="0"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:layout_margin="20sp"/>
+
+    <ImageButton
+        android:id="@+id/buttonPrekiniVrska"
+        android:layout_width="40sp"
+        android:layout_height="40sp"
+        app:layout_constraintTop_toBottomOf="@+id/SmetkaScroll"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:textColor="@color/white"
+        android:layout_margin="20sp"
+        android:src="@drawable/ic_add"
+        android:background="@drawable/roundcorner"
+        android:backgroundTint="#CF6161"
+        android:onClick="DosadiArtikl"/>
+
+    <Button
+        android:id="@+id/buttonRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/SmetkaScroll"
+        app:layout_constraintLeft_toRightOf="@+id/buttonPrekiniVrska"
+        app:layout_constraintRight_toLeftOf="@id/txtVkupno"
+        android:layout_marginLeft="20dp"
+        android:text="Испринтај"
+        android:textColor="@color/white"
+        android:layout_marginTop="17dp"
+        app:cornerRadius="20dp"
+        android:backgroundTint="#CF6161"
+        android:onClick="Isprintaj"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PromeniLozinkaActivity"
+    android:background="@color/white"
+    android:scrollbars="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/Widget.MaterialComponents.Toolbar.Primary"
+        app:title="Промени лозинка"
+        app:titleTextColor="@color/black"
+        android:backgroundTint="#CF6161"/>
+
+    <EditText
+        android:id="@+id/PLStaraLozinka"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint=" Стара лозинка"
+        android:inputType="textPassword"
+        app:layout_constraintTop_toBottomOf="@+id/my_toolbar"
+        android:layout_marginTop="40dp"
+        android:drawableLeft="@drawable/ic_pass"
+        android:textColor="@color/black"
+        android:textColorHint="#7E7C7C"
+        android:backgroundTint="@color/black"/>
+
+    <EditText
+        android:id="@+id/PLNovaLozinka"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint=" Нова лозинка"
+        android:inputType="textPassword"
+        app:layout_constraintTop_toBottomOf="@+id/PLStaraLozinka"
+        android:layout_marginTop="30dp"
+        android:drawableLeft="@drawable/ic_pass"
+        android:textColor="@color/black"
+        android:textColorHint="#7E7C7C"
+        android:backgroundTint="@color/black"/>
+
+    <EditText
+        android:id="@+id/PLNovaLozinka1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint=" Повторете ја новата лозинката"
+        android:inputType="textPassword"
+        app:layout_constraintTop_toBottomOf="@+id/PLNovaLozinka"
+        android:layout_marginTop="30dp"
+        android:drawableLeft="@drawable/ic_pass"
+        android:textColor="@color/black"
+        android:textColorHint="#7E7C7C"
+        android:backgroundTint="@color/black"/>
+
+    <Button
+        android:id="@+id/buttonPromeniLozinka"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/PLNovaLozinka1"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_margin="30dp"
+        android:text="Промени"
+        android:textColor="@color/white"
+        app:cornerRadius="20dp"
+        android:backgroundTint="#CF6161"
+        android:onClick="Promeni"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
