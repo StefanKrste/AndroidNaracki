@@ -53,6 +53,7 @@ public class LoginActivity extends AppCompatActivity {
 
         TextView txt = (TextView) findViewById(R.id.txtRegister);
         txt.setPaintFlags(txt.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
+        
     }
 
     public void Login(View view) {
