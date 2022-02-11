@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
     tools:context=".SmetkaActivity">
 
     <androidx.appcompat.widget.Toolbar
@@ -16,37 +18,38 @@
         app:title="Сметка"
         app:titleTextColor="@color/black" />
 
-    <TextView
-        android:id="@+id/txtMasi"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/my_toolbar"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:text="Број на маса:"
-        android:textSize="18sp"
-        android:textColor="@color/black"
-        android:layout_margin="20sp"/>
-
-    <TextView
-        android:id="@+id/brMasi"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/my_toolbar"
-        app:layout_constraintLeft_toRightOf="@id/txtMasi"
-        android:textSize="18sp"
-        android:textColor="@color/black"
-        android:layout_margin="20sp"/>
-
-    <ScrollView
-        android:id="@+id/SmetkaScroll"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/txtMasi">
+        android:layout_height="0dp"
+        android:layout_weight="0.1"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/txtMasi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Број на маса:"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:layout_margin="20sp"/>
+
+        <TextView
+            android:id="@+id/brMasi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:layout_margin="20sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.06"
+        android:orientation="horizontal">
         <TableLayout
-            android:id="@+id/table"
+            android:id="@+id/tableNaslov"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
             android:stretchColumns="*">
             <TableRow
 
@@ -138,57 +141,69 @@
 
             </TableRow>
         </TableLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/SmetkaScroll"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.75"
+        android:fillViewport="true">
+        <TableLayout
+            android:id="@+id/table"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="*">
+        </TableLayout>
     </ScrollView>
 
-    <TextView
-        android:id="@+id/txtVkupno"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/SmetkaScroll"
-        app:layout_constraintRight_toLeftOf="@+id/Vkupno"
-        android:text="Вкупно:"
-        android:textSize="18sp"
-        android:textColor="@color/black"
-        android:layout_margin="20sp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.12"
+        android:orientation="horizontal">
 
-    <TextView
-        android:id="@+id/Vkupno"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/SmetkaScroll"
-        app:layout_constraintRight_toRightOf="parent"
-        android:text="0"
-        android:textSize="18sp"
-        android:textColor="@color/black"
-        android:layout_margin="20sp"/>
+        <ImageButton
+            android:id="@+id/buttonPrekiniVrska"
+            android:layout_width="40sp"
+            android:layout_height="40sp"
+            android:textColor="@color/white"
+            android:layout_margin="20sp"
+            android:src="@drawable/ic_add"
+            android:background="@drawable/roundcorner"
+            android:backgroundTint="#CF6161"
+            android:onClick="DosadiArtikl"/>
 
-    <ImageButton
-        android:id="@+id/buttonPrekiniVrska"
-        android:layout_width="40sp"
-        android:layout_height="40sp"
-        app:layout_constraintTop_toBottomOf="@+id/SmetkaScroll"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:textColor="@color/white"
-        android:layout_margin="20sp"
-        android:src="@drawable/ic_add"
-        android:background="@drawable/roundcorner"
-        android:backgroundTint="#CF6161"
-        android:onClick="DosadiArtikl"/>
+        <Button
+            android:id="@+id/buttonRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Испринтај"
+            android:textColor="@color/white"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            app:cornerRadius="20dp"
+            android:backgroundTint="#CF6161"
+            android:onClick="Isprintaj"/>
 
-    <Button
-        android:id="@+id/buttonRegister"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/SmetkaScroll"
-        app:layout_constraintLeft_toRightOf="@+id/buttonPrekiniVrska"
-        app:layout_constraintRight_toLeftOf="@id/txtVkupno"
-        android:layout_marginLeft="20dp"
-        android:text="Испринтај"
-        android:textColor="@color/white"
-        android:layout_marginTop="17dp"
-        app:cornerRadius="20dp"
-        android:backgroundTint="#CF6161"
-        android:onClick="Isprintaj"/>
+        <TextView
+            android:id="@+id/txtVkupno"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Вкупно:"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:layout_margin="20sp"/>
+
+        <TextView
+            android:id="@+id/Vkupno"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="20sp"/>
+    </LinearLayout>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

@@ -1,5 +1,7 @@
 package com.example.apnarackirestoran;
 
+import static com.example.apnarackirestoran.R.color.white;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -140,6 +142,7 @@ public class SmetkaActivity extends AppCompatActivity {
 
         LinearLayout layout = new LinearLayout(this);
         layout.setOrientation(LinearLayout.VERTICAL);
+        //layout.setBackgroundColor(Color.argb(255, 255, 255, 255));
 
         LinearLayout.LayoutParams txtParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT,LinearLayout.LayoutParams.WRAP_CONTENT );
         txtParams.setMargins(10,25,10,10);
@@ -314,21 +317,15 @@ public class SmetkaActivity extends AppCompatActivity {
                             try {
                                 String idSmetka = response.getString("idSmetka");
 
-                                int childCount = Tabela.getChildCount();
-                                if (childCount > 1) {
-                                    Tabela.removeViews(1, childCount - 1);
-                                }
                                 for (int i = MasaArtikli.size() - 1; i >= 0; i--) {
                                     if (MasaArtikli.get(i).isSelektirnao()) {
                                         double vkupno = Double.parseDouble(Vkupno.getText().toString());
                                         Vkupno.setText(String.valueOf(vkupno - (MasaArtikli.get(i).getKol() * Double.parseDouble(MasaArtikli.get(i).getMaloprodaznaCena()))));
                                         MasaArtikli.remove(i);
+                                        Tabela.removeView(Tabela.getChildAt(i));
+                                        System.out.println(i);
                                     }
                                 }
-                                for (int i = 0; i < MasaArtikli.size(); i++) {
-                                    SozdadiRed(MasaArtikli.get(i), MasaArtikli.get(i).isSelektirnao());
-                                }
-
                                 System.out.println("TREBA DA SE ISPRINTE SMETKATA SO ID- " + idSmetka);
                             } catch (JSONException e) {
                                 e.printStackTrace();

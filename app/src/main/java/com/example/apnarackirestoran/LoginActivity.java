@@ -1,6 +1,7 @@
 package com.example.apnarackirestoran;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -45,6 +46,8 @@ public class LoginActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_main);
 
@@ -53,7 +56,6 @@ public class LoginActivity extends AppCompatActivity {
 
         TextView txt = (TextView) findViewById(R.id.txtRegister);
         txt.setPaintFlags(txt.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
-        
     }
 
     public void Login(View view) {
