@@ -390,7 +390,11 @@ public class SmetkaActivity extends AppCompatActivity {
                     artikl.setSifraArtikl(artiklJ.getString("sifra_na_artikl"));
                     artikl.setNazivArtikl(artiklJ.getString("naziv_na_atikl"));
                     artikl.setEdinicaMerka(artiklJ.getString("edinica_merka"));
-                    artikl.setMaloprodaznaCena(artiklJ.getString("maloprodazna_cena"));
+                    if(artiklJ.getString("maloprodazna_cena_"+PosledenObjekt.getSifra().toString()).equals("")){
+                        artikl.setMaloprodaznaCena(artiklJ.getString("maloprodazna_cena"));
+                    }else{
+                        artikl.setMaloprodaznaCena(artiklJ.getString("maloprodazna_cena_"+PosledenObjekt.getSifra().toString()));
+                    }
                     artikl.setDanocnaTarifa(artiklJ.getInt("danocna_tarifa"));
                     artikl.setMKProizvod(artiklJ.getInt("mk_proizvod"));
                     artikl.setKol(Integer.parseInt(Kol));
