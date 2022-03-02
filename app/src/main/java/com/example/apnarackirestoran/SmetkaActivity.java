@@ -542,7 +542,7 @@ public class SmetkaActivity extends AppCompatActivity {
                                     for (int i=0; i<MasaArtikli.size();i++) {
                                         if(MasaArtikli.get(i).getID()==artikl.getID()) {
                                             MasaArtikli.remove(i);
-                                            row.setVisibility(View.GONE);
+                                            Tabela.removeView(Tabela.getChildAt(i));
                                             if(selektiraj.isChecked()) {
                                                 double vkupno = Double.parseDouble(Vkupno.getText().toString());
                                                 Vkupno.setText(String.valueOf(vkupno - (artikl.getKol() * Double.parseDouble(artikl.getMaloprodaznaCena()))));
